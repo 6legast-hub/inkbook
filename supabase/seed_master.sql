@@ -11,17 +11,17 @@
 
 -- роль мастера
 update public.profiles
-set role = 'master', name = 'Anna Volkova'
-where id = '<MASTER_USER_ID>';
+set role = 'master', name = 'Олеся Глазырина'
+where id = '3ad3b967-e088-4a4c-83c1-7d239d279270';
 
 -- публичная визитка + рабочие часы
 insert into public.master_profile
   (user_id, slug, bio, studio_address, instagram, portfolio_images, working_hours)
 values (
-  '<MASTER_USER_ID>',
+  '3ad3b967-e088-4a4c-83c1-7d239d279270',
   'anna-ink',
   'Тату-мастер, fine-line / блэкворк / орнаментал. Каждый эскиз индивидуально.',
-  'Москва, Большой Козихинский пер., 12 · студия INKROOM',
+  'Красноярск, ул. Ебенево, студия INKROOM',
   'anna.ink.studio',
   '{}',
   '{"mon":[["11:00","20:00"]],"tue":[["11:00","20:00"]],"wed":[["11:00","20:00"]],"thu":[["11:00","20:00"]],"fri":[["11:00","18:00"]],"sat":[],"sun":[]}'::jsonb
@@ -37,7 +37,7 @@ on conflict (user_id) do update
 insert into public.appointment_types
   (master_id, name, duration_minutes, price_from, color)
 values
-  ('<MASTER_USER_ID>', 'Консультация',   30,  0,     '#d7263d'),
-  ('<MASTER_USER_ID>', 'Маленькая тату', 120, 6000,  '#e0a458'),
-  ('<MASTER_USER_ID>', 'Средний сеанс',  240, 14000, '#5b8c5a'),
-  ('<MASTER_USER_ID>', 'Большая работа', 300, 22000, '#4361ee');
+  ('3ad3b967-e088-4a4c-83c1-7d239d279270', 'Консультация',   30,  0,     '#d7263d'),
+  ('3ad3b967-e088-4a4c-83c1-7d239d279270', 'Маленькая тату', 120, 6000,  '#e0a458'),
+  ('3ad3b967-e088-4a4c-83c1-7d239d279270', 'Средний сеанс',  240, 14000, '#5b8c5a'),
+  ('3ad3b967-e088-4a4c-83c1-7d239d279270', 'Большая работа', 300, 22000, '#4361ee');
