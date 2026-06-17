@@ -10,11 +10,11 @@ import type { MasterProfile, AppointmentType } from "@/lib/types";
 
 export const SAMPLE_MASTER: MasterProfile = {
   slug: "anna-ink",
-  name: "Anna Volkova",
+  name: "Olesya Glazyrina",
   tagline: "Тонкая графика и блэкворк",
   bio: "Тату-мастер с 7 годами практики. Работаю в стилях fine-line, блэкворк и орнаментал. Каждый эскиз — индивидуально под клиента, без флэша из каталога. Стерильность, аккуратность и спокойная атмосфера в студии.",
-  studioAddress: "Москва, Большой Козихинский пер., 12 · студия INKROOM",
-  instagram: "anna.ink.studio",
+  studioAddress: "Красноярск",
+  instagram: "glsTATTOO",
   avatarUrl: null,
   workingHours: {
     mon: [["11:00", "20:00"]],
